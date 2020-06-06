@@ -1,0 +1,38 @@
+html, body{
+    height: 100%;
+
+}
+.container-fluid{
+  height: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+
+    
+}
+
+.row-barra {
+    height: 10%;
+    background-color: white;
+    
+    
+}
+
+#Logo {
+    background-color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 150%;
+    margin: auto;
+   
+}
+.botones-barra{
+    background-color: ;
+    margin-bottom: none;
+    margin-left: 2%;
+    
+    
+
+}
+.botones-barra:hover{
+    color:  white;
+    background-color: #2ca444;
+}
