@@ -11,6 +11,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
      <link rel="stylesheet" href="css/Barra-Menu.css">
      <link rel="stylesheet" href="css/Catalog-Clientes.css">
+     <style>
+       .container-fluid {
+        padding-top: 30px;
+        height: initial;
+       }
+       .content {
+        display: flex;
+        flex-direction: column;
+       }
+       .fila {
+         display: flex;
+       }
+       .catalogo {
+         height: 400px;
+         width: 250px;
+         cursor: pointer;
+       }
+       .btnPlus {
+        position: fixed;
+        bottom: 10px;
+        right: 25px;
+        border-radius: 100%;
+        padding: 10px;
+        background-color: teal;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        color: #ffff;
+        cursor: pointer;
+        font-size: 25px;
+       }
+       .btnPlus a {
+        color: #ffff;
+       }
+     </style>
     <title>Tus Catalogos </title>
 </head>
 <body style="background-image: url(images/bg-06.jpg); background-size: cover;">
@@ -41,7 +76,7 @@
       <button class="btn botones-barra" onclick="location.href='Catalogos-Cliente.html'" style="width: 100%;" >Catalogos</button>
     </div>
       <div class="col-1"  style="align-self: center; padding: 0%;">
-      <button class="btn botones-barra"  onclick="location.href='pedidos-Cliente.html'" style="width: 100%;" >Pedidos</button>
+      <a href="./perfil.html" class="btn botones-barra"  onclick="location.href='pedidos-Cliente.html'" style="width: 100%;" >Pedidos</a>
     </div>
       <div class="col-1"  style="align-self: center; padding: 0%;">
       <button class="btn botones-barra " style="width: 100%;" >Pagos</button>
@@ -50,37 +85,112 @@
       <button class="btn botones-barra" style="width: 100%;" >Perfil</button>
     </div>
       <div class="col-1"  style="align-self: center; padding: 0%;">
-      <button class="btn botones-barra  "  onclick="location.href='inicio-sesion.html'" style="width: 100%;" >Salir</button>
+      <button id="btnSignOut" class="btn botones-barra  "  onclick="location.href='inicio-sesion.html'" style="width: 100%;" >Salir</button>
     </div>
     
   </div>
   <div class="container-fluid">
    
-   <div class="row cuerpo">
-      <div class="col-2">
-          
-      </div>
-      
-      <div class="col-9" style=" padding-top: 1%; height: 100%; padding: 1%;margin: 0%; ">
-      
-        <div style="height: 15%">
-            <h1>Tus Catalogos</h1>
-            <h4>Vendedor</h4>
-            <select style="background: none; width: 30%; border-radius: 10px; border: 2px solid black;">
-                <option>Miguel</option>
-                <option>Arturo</option>
-                <option>Rocio</option>
-                <option>Lupita </option>
-                <option>Luis</option>
-            </select> 
+  <div style="height: 15%">
+      <h1>Tus Catalogos</h1> 
+  </div>
+  <div id="tabla" class="content">
+    <!-- <div class="fila">
+      <div class="catalogo">
+        <div class="portada-catalogo" style="background-image: url(./images/cat-1.jpg);background-size:cover;">
+                          
+        </div> 
+        <div class="nom-catalogo">
+        
         </div>
+      </div>
+      <div class="catalogo">
+        <div class="portada-catalogo" style="background-image: url(images/cat-2.jpg);background-size:cover;">
+                         
+        </div> 
+        <div class="nom-catalogo">
+       
+        </div> 
+      </div>
+      <div class="catalogo">
+        <div class="portada-catalogo" style="background-image: url(images/cat-3.jpg);background-size:cover;">
+                          
+        </div> 
+        <div class="nom-catalogo">
+       
+        </div> 
+      </div>
+      <div class="catalogo">
+        <div class="portada-catalogo" style="background-image: url(images/cat-4.jpg);background-size:cover;">
+                          
+        </div> 
+        <div class="nom-catalogo">
+       
+        </div>
+      </div>
+      <div class="catalogo">
+        <div class="portada-catalogo" style="background-image: url(images/cat-5.jpg);background-size:cover;">
+                         
+        </div> 
+        <div class="nom-catalogo">
+       
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="catalogo">
+      <div class="portada-catalogo" style="background-image: url(images/cat-6.jpg);background-size:cover;">
+                       
+      </div> 
+      <div class="nom-catalogo">
+      
+      </div>
+    </div>
+    <div class="catalogo">
+      <div class="portada-catalogo" style="background-image: url(images/cat-7.jpg);background-size:cover;">
+                        
+      </div> 
+      <div class="nom-catalogo">
+     
+      </div> 
+    </div>
+    <div class="catalogo">
+      <div class="portada-catalogo" style="background-image: url(images/cat-8.jpg);background-size:cover;">
+                        
+      </div> 
+      <div class="nom-catalogo">
+     
+      </div>
+    </div>
+    <div class="catalogo">
+      <div class="portada-catalogo" style="background-image: url(images/cat-9.jpg);background-size:cover;">
+                        
+      </div> 
+      <div class="nom-catalogo">
+     
+      </div>
+    </div>
+    <div class="catalogo">
+      <div class="portada-catalogo" style="background-image: url(images/cat-10.jpg);background-size:cover;">
+                       
+      </div> 
+      <div class="nom-catalogo">
+      
+      </div> 
+    </div> -->
+  </div>
+
+
+
+
+   <!-- <div class="row cuerpo"> 
+      <div class="col-9" style=" padding-top: 1%; height: 100%; padding: 1%;margin: 0%; ">
            <div style="height: 100%;">
               <table style="width: 100%;">
                  
                  <tr>
-                     
+                   
                      <td>
-                        <div class="portada-catalogo" style="background-image: url(images/cat-1.jpg);background-size:cover;">
+                        <div class="portada-catalogo" style="background-image: url(./images/cat-1.jpg);background-size:cover;">
                         
                         </div> 
                         <div class="nom-catalogo">
@@ -89,7 +199,7 @@
                          
                      </td>
                      <td>
-                          <div class="portada-catalogo" style="background-image: url(images/cat-2.jpg);background-size:cover;">
+                        <div class="portada-catalogo" style="background-image: url(images/cat-2.jpg);background-size:cover;">
                        
                         </div> 
                         <div class="nom-catalogo">
@@ -97,7 +207,7 @@
                         </div> 
                      </td>
                      <td>
-                          <div class="portada-catalogo" style="background-image: url(images/cat-3.jpg);background-size:cover;">
+                        <div class="portada-catalogo" style="background-image: url(images/cat-3.jpg);background-size:cover;">
                         
                         </div> 
                         <div class="nom-catalogo">
@@ -105,7 +215,7 @@
                         </div> 
                      </td>
                      <td>
-                          <div class="portada-catalogo" style="background-image: url(images/cat-4.jpg);background-size:cover;">
+                        <div class="portada-catalogo" style="background-image: url(images/cat-4.jpg);background-size:cover;">
                         
                         </div> 
                         <div class="nom-catalogo">
@@ -113,18 +223,17 @@
                         </div> 
                      </td>
                      <td>
-                          <div class="portada-catalogo" style="background-image: url(images/cat-5.jpg);background-size:cover;">
+                        <div class="portada-catalogo" style="background-image: url(images/cat-5.jpg);background-size:cover;">
                        
                         </div> 
                         <div class="nom-catalogo">
                        
                         </div> 
-                     </td>
-                     
+                     </td>                  
                  </tr>
                   <tr>
                       <td>
-                          <div class="portada-catalogo" style="background-image: url(images/cat-6.jpg);background-size:cover;">
+                        <div class="portada-catalogo" style="background-image: url(images/cat-6.jpg);background-size:cover;">
                        
                         </div> 
                         <div class="nom-catalogo">
@@ -132,7 +241,7 @@
                         </div> 
                       </td>
                       <td>
-                          <div class="portada-catalogo" style="background-image: url(images/cat-7.jpg);background-size:cover;">
+                        <div class="portada-catalogo" style="background-image: url(images/cat-7.jpg);background-size:cover;">
                         
                         </div> 
                         <div class="nom-catalogo">
@@ -140,7 +249,7 @@
                         </div> 
                       </td>
                       <td>
-                          <div class="portada-catalogo" style="background-image: url(images/cat-8.jpg);background-size:cover;">
+                        <div class="portada-catalogo" style="background-image: url(images/cat-8.jpg);background-size:cover;">
                         
                         </div> 
                         <div class="nom-catalogo">
@@ -148,7 +257,7 @@
                         </div> 
                       </td>
                       <td>
-                          <div class="portada-catalogo" style="background-image: url(images/cat-9.jpg);background-size:cover;">
+                        <div class="portada-catalogo" style="background-image: url(images/cat-9.jpg);background-size:cover;">
                         
                         </div> 
                         <div class="nom-catalogo">
@@ -156,38 +265,25 @@
                         </div> 
                       </td>
                       <td>
-                          <div class="portada-catalogo" style="background-image: url(images/cat-10.jpg);background-size:cover;">
+                        <div class="portada-catalogo" style="background-image: url(images/cat-10.jpg);background-size:cover;">
                        
                         </div> 
                         <div class="nom-catalogo">
                         
                         </div> 
-                      </td>
-                    
-                      
+                      </td>             
                   </tr>
                   
               </table>
-               
-               
-               
-           </div>
-            
-        </div>
-        
-          
-      </div>
-      
-      
-      
-      
-      <div class="col-1">
-          
-      </div>
+           </div>      
+      </div>   
+    </div> -->
        
    </div>
     
-
-    
+   <div class="btnPlus"><a href="./catalogo.html">+</a></div>
+   <script src="./js/jquery.min.js"></script>
+   <script src="./js/app/barra.js"></script>
+   <script src="./js/app/catalogos.js"></script>
 </body>
 </html>
